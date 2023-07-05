@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/main.css' %}"/>
+</head>
+<body id="first">
+   <form method="POST">
+       {% csrf_token %}
+       <table align="center">
+           <tr>
+               <td>{{for.as_table}}</td>
+           </tr>
+           <tr>
+               <td></br></br></br></td>
+           </tr>
+           <tr>
+           <td align="center"><input type="Submit"></td>
+           </tr>
+       </table>
+   </form>
+</body>
+</html>

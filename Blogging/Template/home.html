@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    {% for blogs in blogs %}
+        <article class="media content-section">
+            <img class="rounded-circle article-img" src="{{ posts.author.profile.image.url }}" alt="">
+            <div class="media-body">
+              <div class="article-metadata">
+                <a class="mr-2" href="#">{{ blogs.blogger }}</a>
+                <small class="text-muted">{{ blogs.date_of_blog }}</small>
+              </div>
+              <h2><a class="article-title" href="{% url 'details' blogs.id %}">{{ blogs.title }}</a></h2>
+              <p class="article-content">{{ blogs.content }}</p>
+            </div>
+            <br>
+          </article>
+    {% endfor %}
+{% endblock content %}
